@@ -30,3 +30,14 @@ spring:
   logging:
     level:
       root: trace
+
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 233943552277-08secj2urcsbih11b1j8hcete8op8hmr.apps.googleusercontent.com
+            client-secret: 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
+            scope:
+              - email
+              - profile

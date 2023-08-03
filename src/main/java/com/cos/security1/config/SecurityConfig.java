@@ -37,6 +37,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .loginProcessingUrl("/login")
                 // 얘가 로그인페이지를 통해서 요청해주면 index.html 로 가지만
                 // 만약 다른 페이지를 요청했었다면 로그인 후 해당 페이지로 이동시켜준다.
-                .defaultSuccessUrl("/");
+                .defaultSuccessUrl("/")
+                .and()
+                .oauth2Login()
+                .loginPage("/loginForm"); // 구글 로그인이 완료된 뒤의 후처리가 필요함.
     }
 }
